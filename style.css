@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* Navbar */
+nav {
+  display: flex;
+  background-color: #ff8ba7;
+  padding: 20px 100px;
+  justify-content: space-between;
+  color: white;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 10px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav .logo {
+  font-family: "Montserrat", cursive;
+}
+nav ul li a:hover {
+  color: #8bd3dd;
+}
+.container-foto {
+  display: flex;
+  padding: 30px;
+}
+.foto {
+  overflow: auto;
+
+  width: 2000px;
+  border: 10px solid #8bd3dd;
+  border-radius: 17px;
+  background-color: #8bd3dd;
+  box-shadow: 0 15px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+#bagian-utama {
+  display: flex;
+}
+
+.harga {
+  flex-basis: 20%;
+
+  background-color: #8bd3dd;
+  border-radius: 16px;
+
+  box-shadow: 0 15px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  padding: 30px;
+  margin: 30px;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.font-harga {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.beli {
+  flex-basis: 80%;
+
+  background-color: #8bd3dd;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  padding: 2rem;
+
+  margin: 30px;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.beli h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+input,
+select {
+  background-color: #ff8ba7;
+  color: var(--primary);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  color: white;
+}
+
+.input-section label {
+  color: white;
+  font-size: 1.2rem;
+}
+
+p.catatan {
+  color: white;
+}
+
+.button-section {
+  padding-top: 20px;
+  display: flex;
+  gap: 9rem;
+}
+
+.button-section input {
+  width: 80%;
+}
+
+#hasil {
+  background-color: #8bd3dd;
+  border-radius: 16px;
+
+  box-shadow: 0 15px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  padding: 30px;
+  margin: 30px;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+#hasil h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  color: black;
+
+  font-weight: 500;
+
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr {
+  background-color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ff8ba7;
+  color: white;
+}
+
+footer {
+  background-color: #ff8ba7;
+  color: var(--text);
+  padding: 1rem 8rem;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .foto {
+    flex-direction: column;
+  }
+  #bagian-utama{
+    flex-direction: column;
+  }
+
+  .beli {
+    flex-direction: column;
+  }
+  .harga {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktik Perulangan Javascript Tampilan CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Montserrat&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Montserrat&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h2>Kredit Rumah.</h2>
+      </div>
+      <ul>
+        <li><a href="#beli">Beli</a></li>
+        <li><a href="#harga">Harga</a></li>
+      </ul>
+    </nav>
+    <div class="container-foto">
+      <img class="foto" src="rumah.jpg" alt="rumah" />
+    </div>
+    <div id="bagian-utama">
+      <div class="harga" id="harga">
+        <h2 class="font-harga">Harga</h2>
+        <div class="input-section">
+          <label for="alamanda">Alamanda</label>
+          <input type="text" name="alamanda" id="alamanda" value="120.000.000" disabled />
+        </div>
+        <div class="input-section">
+          <label for="mawar">Mawar</label>
+          <input type="text" name="mawar" id="mawar" value="130.000.000" disabled />
+        </div>
+        <p class="catatan">Uang muka = 20% total harga rumah</p>
+      </div>
+      <div class="beli" id="beli">
+        <h2>Beli</h2>
+        <div class="input-section">
+          <label for="tipeRumah">Tipe Rumah</label>
+          <select name="tipeRumah" id="tipeRumah">
+            <option value="tipe1">Alamanda</option>
+            <option value="tipe2">Mawar</option>
+          </select>
+        </div>
+        <div class="input-section">
+          <label for="lamaCicilan">Lama Kredit</label>
+          <input type="number" name="lamaCicilan" id="lamaCicilan" min="0" value="0" />
+        </div>
+        <div class="button-section">
+          <input type="button" value="Beli" onclick="hitungKredit()" />
+          <input type="reset" value="reset" />
+        </div>
+      </div>
+    </div>
+
+    <div id="hasil" style="display: none">
+      <h2>Hasil</h2>
+      <div class="input-section">
+        <label for="hasilJudulTipeRumah">Tipe Rumah</label>
+        <input type="text" name="hasilJudulTipeRumah" id="hasilJudulTipeRumah" value="" readonly />
+      </div>
+      <div class="input-section">
+        <label for="hasilHargaRumah">Harga Rumah</label>
+        <input type="text" name="hasilHargaRumah" id="hasilHargaRumah" value="" readonly />
+      </div>
+      <div class="input-section">
+        <label for="hasilUangMuka">Uang Muka</label>
+        <input type="text" name="hasilUangMuka" id="hasilUangMuka" value="" readonly />
+      </div>
+      <div class="input-section">
+        <label for="hasilSisaCicilan">Sisa</label>
+        <input type="text" name="hasilSisaCicilan" id="hasilSisaCicilan" value="" readonly />
+      </div>
+      <div class="input-section">
+        <label for="periodeKredit">Lama Kredit</label>
+        <input type="text" name="periodeKredit" id="periodeKredit" readonly />
+      </div>
+      <div class="input-section">
+        <label for="angsuranBulan">Angsuran</label>
+        <input type="text" name="angsuranBulan" id="angsuranBulan" value="" readonly />
+      </div>
+      <table id="tabelAngsuran">
+        <thead>
+          <tr>
+            <th>Bulan</th>
+            <th>Angsuran</th>
+            <th>Sisa</th>
+          </tr>
+        </thead>
+        <tbody id="bodiTabel"></tbody>
+      </table>
+    </div>
+
+    <footer><p>&copy; 2023 Epriya Mecca</p></footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
